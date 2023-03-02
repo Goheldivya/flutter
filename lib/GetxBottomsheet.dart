@@ -31,7 +31,7 @@ class _BottomSheeState extends State<BottomShee>
                           children: [
                             ListTile(
                               leading: Icon(Icons.wb_sunny_outlined),
-                              title: Text("light theme"),
+                              title: Text("light theme ${Get.arguments}"),
                               onTap: (){Get.changeTheme(ThemeData.light());},
                             ),
                             ListTile(

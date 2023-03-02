@@ -1,13 +1,26 @@
 
 import 'package:demo_projects/GetxBottomsheet.dart';
 import 'package:demo_projects/GetxDialog.dart';
+import 'package:demo_projects/GetxNamedRoute.dart';
+import 'package:demo_projects/GetxRouteNavig.dart';
 import 'package:demo_projects/GetxSnackbar.dart';
 import 'package:demo_projects/demo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(GetMaterialApp(debugShowCheckedModeBanner: false,home: BottomShee(),));
+  runApp(GetMaterialApp(
+    debugShowCheckedModeBanner: false,
+    initialRoute: "/",  // When ever i open app which page will show first
+    defaultTransition: Transition.zoom,
+    getPages: [
+      GetPage(name: "/", page: ()=>GetxRouteNavi()),
+      GetPage(name: "/name", page: ()=>MyApp()),
+      GetPage(name: "/nextScreen", page: ()=>DialogBox(),transition: Transition.leftToRight)
+    ],
+    home: GetxNamedRoute(),
+  ));
+  //runApp(GetMaterialApp(debugShowCheckedModeBanner: false,home: GetxRouteNavi(),));
   //runApp(MaterialApp(debugShowCheckedModeBanner:false,home: DemoForApi(),));
 }
 
