@@ -1,8 +1,14 @@
+
+import 'package:demo_projects/GetxBottomsheet.dart';
+import 'package:demo_projects/GetxDialog.dart';
+import 'package:demo_projects/GetxSnackbar.dart';
 import 'package:demo_projects/demo.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner:false,home: DemoForApi(),));
+  runApp(GetMaterialApp(debugShowCheckedModeBanner: false,home: BottomShee(),));
+  //runApp(MaterialApp(debugShowCheckedModeBanner:false,home: DemoForApi(),));
 }
 
 class MyApp extends StatelessWidget {
