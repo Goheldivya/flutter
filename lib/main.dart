@@ -1,7 +1,8 @@
+import 'package:demo_projects/demo.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(debugShowCheckedModeBanner:false,home: DemoForApi(),));
 }
 
 class MyApp extends StatelessWidget {
